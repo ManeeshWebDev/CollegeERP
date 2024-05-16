@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link href="~/Content/css/bootstrap.css" rel='stylesheet' />
+    <link href="~/Content/css/all.css" rel="stylesheet" />
+    <link href="~/Content/css/sweetalert.min.css" rel="stylesheet" />
+    <link href="~/Content/css/datepicker.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/custom_theme.css" rel='stylesheet' />
+    <link href="~/Content/css/responsive.css" rel='stylesheet' />
+
+    <script type="text/javascript" src="~/Content/js/jquery-min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Content/js/aes.js"></script>
+    <script type="text/javascript" src="~/Content/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/datepicker.js"></script>
+    <script type="text/javascript" src="~/Content/js/datepicker.en.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script>
+      
+        $(".toggle-password").click(function () { $(this).toggleClass("fa-eye fa-eye-slash"); var input = $($(this).attr("toggle")); if (input.attr("type") == "password") { input.attr("type", "text"); } else { input.attr("type", "password"); } });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            function disableBack() {
+                window.history.forward()
+            }
+            window.onload = disableBack();
+            window.onpageshow = function (e) {
+                if (e.persisted)
+                    disableBack();
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+       
+        <div class="row">
+            <div class="col-md-6 loginsidebar">
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-2 text-center"> <img src="~/Content/images/logo.png" class="img-fluid" /> </div>
+                    <div class="col-md-12 deptname">
+                        <h5>Veer Madho Singh Bhandari Uttarakhand Technical University, Dehradun</h5>
+                       
+                        <h3>STUDENT LOGIN</h3>
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-md-5">
+                <ul class="foot-list">
+                    <li>Copyright Veer Madho Singh Bhandari Uttarakhand Technical University,Dehradun</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <ul class="foot-list">
+                    <li><b>Technical Helpline :</b> Mobile:+91-9151988051, Email ID: helputuums@uktech.ac.in</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <ul class="foot-list">
+                    <li>@*Powered by <a href="http://otpl.co.in/" target="_blank">OmniNet</a>*@</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Instructions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list">
+                        <li>Step 1: Enter your Company ID, User ID & Password. </li>
+                        <li>Step 2: Set up your Security Questions. </li>
+                        <li>Step 3: One Time Passcode Setup. </li>
+                        <li>Step 4: User Password Change. </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+s
